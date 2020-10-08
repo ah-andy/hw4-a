@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Joe's Hotdogs</title>
+</head>
+
+<body>
+  <h1> Welcome to Joe's Hotdogs </h1>
+  <h2> Your Order </h2>
+  <script language="javascript">
+  hotdogs= prompt("How many hotdogs?", "0");
+  fries= prompt("How many fries?", "0");
+  sodas= prompt("How many sodas?", "0");
+document.write("Hotdogs: " + hotdogs + " at $3.25 is " + "$" + (hotdogs*3.25).toFixed(2) + "<br />");
+document.write("Fries: " + fries + " at $2.00 is " + "$" + (fries*2.00).toFixed(2) + "<br />");
+document.write("Drinks: " + sodas + " at $1.50 is " + "$" + (sodas*1.50).toFixed(2) + "<br />");
+subtotal = (hotdogs*3.25 + fries*2.00 + sodas*1.50);
+if (subtotal >= 20) {
+  document.write("You qualify for our 10% discount" + "<br />");
+  document.write("Subtotal: " + "$" + (0.9*(subtotal)).toFixed(2) + "<br />");
+  document.write("Meals Tax: " + "$" + (subtotal*0.0625).toFixed(2) + "<br />");
+  document.write("Total: " + "$" + (0.9*(subtotal)+(subtotal*0.0625)).toFixed(2) + "<br />"); 
+}else{
+  document.write("Subtotal: " + "$" + (subtotal).toFixed(2) + "<br />");
+  document.write("Meals Tax: " + "$" + (subtotal*0.0625).toFixed(2) + "<br />");
+  document.write("Total: " + "$" + ((subtotal)+(subtotal*0.0625)).toFixed(2) + "<br />"); 
+}
+  
+  
+  
+  
+  </script>
+</body>
+</html>
